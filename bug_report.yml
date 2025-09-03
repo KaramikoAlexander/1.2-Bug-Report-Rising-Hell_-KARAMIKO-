@@ -1,0 +1,92 @@
+name: "🐞 Bug Report"
+description: "Laporkan bug yang ditemukan dalam game"
+title: "[Bug]: "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: input
+    id: bug-id
+    attributes:
+      label: "Bug ID"
+      description: "Masukkan kode unik bug (contoh: BUG-001)"
+      placeholder: "BUG-001"
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: "Title"
+      description: "Ringkasan singkat bug"
+      placeholder: "[Collision] Player jatuh tembus platform di Level 1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Deskripsikan bug secara detail"
+      placeholder: "Karakter jatuh tembus platform saat melompat ke atas platform kecil."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Langkah-langkah untuk mereproduksi bug"
+      placeholder: |
+        1. Jalankan game di Level 1
+        2. Arahkan player ke platform kecil
+        3. Tekan tombol jump
+        4. Player jatuh ke bawah map
+    validations:
+      required: true
+
+  - type: input
+    id: expected
+    attributes:
+      label: "Expected Result"
+      placeholder: "Player mendarat di atas platform."
+
+  - type: input
+    id: actual
+    attributes:
+      label: "Actual Result"
+      placeholder: "Player jatuh tembus platform."
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Severity"
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      options:
+        - P3 (Low)
+        - P2 (Medium)
+        - P1 (High)
+
+  - type: input
+    id: environment
+    attributes:
+      label: "Environment"
+      placeholder: "Windows 11, GTX 1660, Unity 2022.3, Build v0.8.2 Beta"
+
+  - type: textarea
+    id: attachment
+    attributes:
+      label: "Attachment"
+      description: "Tambahkan link screenshot / video / log error"
+      placeholder: "Link Google Drive / Screenshot"
